@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  android:padding="32dp"
+  android:gravity="center"
+  android:background="#F5F5F5">
+
+  <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Iniciar Sesión"
+    android:textSize="28sp"
+    android:textStyle="bold"
+    android:layout_marginBottom="40dp"
+    android:textColor="#2C3E50" />
+
+  <!-- Campo Username -->
+  <EditText
+    android:id="@+id/etUsername"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Username"
+    android:inputType="text"
+    android:padding="16dp"
+    android:layout_marginBottom="16dp"
+    android:background="@drawable/edittext_background"
+    android:textSize="16sp" />
+
+  <!-- Campo Password -->
+  <EditText
+    android:id="@+id/etPassword"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Password"
+    android:inputType="textPassword"
+    android:padding="16dp"
+    android:layout_marginBottom="24dp"
+    android:background="@drawable/edittext_background"
+    android:textSize="16sp" />
+
+  <!-- Etiqueta Acceso Correcto -->
+  <TextView
+    android:id="@+id/tvAccessGranted"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Acceso Correcto"
+    android:textColor="#27AE60"
+    android:textStyle="bold"
+    android:textSize="18sp"
+    android:visibility="gone"
+    android:layout_marginBottom="16dp"
+    android:background="#E8F5E8"
+    android:padding="12dp"
+    android:drawableLeft="@android:drawable/ic_dialog_info"
+    android:drawablePadding="8dp" />
+
+  <!-- Etiqueta Acceso Denegado -->
+  <TextView
+    android:id="@+id/tvAccessDenied"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Acceso Denegado"
+    android:textColor="#E74C3C"
+    android:textStyle="bold"
+    android:textSize="18sp"
+    android:visibility="gone"
+    android:layout_marginBottom="16dp"
+    android:background="#FDF2F2"
+    android:padding="12dp"
+    android:drawableLeft="@android:drawable/ic_dialog_alert"
+    android:drawablePadding="8dp" />
+
+  <!-- Contenedor de Botones -->
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="16dp">
+
+    <!-- Botón Login -->
+    <Button
+      android:id="@+id/btnLogin"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:text="LOGIN"
+      android:textColor="#FFFFFF"
+      android:textStyle="bold"
+      android:textSize="16sp"
+      android:background="@drawable/button_login_background"
+      android:layout_marginEnd="8dp"
+      android:padding="16dp" />
+
+    <!-- Botón Cancel -->
+    <Button
+      android:id="@+id/btnCancel"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:text="CANCEL"
+      android:textColor="#7F8C8D"
+      android:textStyle="bold"
+      android:textSize="16sp"
+      android:background="@drawable/button_cancel_background"
+      android:layout_marginStart="8dp"
+      android:padding="16dp" />
+
+  </LinearLayout>
+
+</LinearLayout>

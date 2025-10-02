@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  android:padding="16dp"
+  android:background="#f5f5f5">
+
+  <!-- Título de la aplicación -->
+  <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Calculadora de Propinas"
+    android:textSize="24sp"
+    android:textStyle="bold"
+    android:textColor="#2c3e50"
+    android:gravity="center"
+    android:layout_marginBottom="24dp" />
+
+  <!-- Monto de la cuenta -->
+  <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Monto total de la cuenta:"
+    android:textSize="16sp"
+    android:textColor="#34495e"
+    android:layout_marginBottom="8dp" />
+
+  <EditText
+    android:id="@+id/editTextAmount"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="$0.00"
+    android:inputType="numberDecimal"
+    android:textSize="18sp"
+    android:padding="12dp"
+    android:background="@drawable/edittext_background"
+    android:layout_marginBottom="24dp" />
+
+  <!-- Selección de propina -->
+  <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Selecciona el porcentaje de propina:"
+    android:textSize="16sp"
+    android:textColor="#34495e"
+    android:layout_marginBottom="12dp" />
+
+  <RadioGroup
+    android:id="@+id/radioGroupTip"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginBottom="24dp">
+
+    <RadioButton
+      android:id="@+id/radioButton0"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="0% - Sin propina"
+      android:textSize="16sp"
+      android:padding="8dp" />
+
+    <RadioButton
+      android:id="@+id/radioButton5"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="5% - Servicio básico"
+      android:textSize="16sp"
+      android:padding="8dp" />
+
+    <RadioButton
+      android:id="@+id/radioButton10"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="10% - Buen servicio"
+      android:textSize="16sp"
+      android:padding="8dp"
+      android:checked="true" />
+
+    <RadioButton
+      android:id="@+id/radioButton15"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="15% - Excelente servicio"
+      android:textSize="16sp"
+      android:padding="8dp" />
+
+  </RadioGroup>
+
+  <!-- Número de personas -->
+  <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Número de personas:"
+    android:textSize="16sp"
+    android:textColor="#34495e"
+    android:layout_marginBottom="8dp" />
+
+  <EditText
+    android:id="@+id/editTextPeople"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="1"
+    android:inputType="number"
+    android:textSize="18sp"
+    android:padding="12dp"
+    android:background="@drawable/edittext_background"
+    android:layout_marginBottom="24dp" />
+
+  <!-- Botón de calcular -->
+  <Button
+    android:id="@+id/buttonCalculate"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="CALCULAR"
+    android:textSize="18sp"
+    android:textStyle="bold"
+    android:padding="16dp"
+    android:background="@drawable/ic_launcher_background"
+    android:textColor="#ffffff"
+    android:layout_marginBottom="24dp" />
+
+  <!-- Resultados -->
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/result_background"
+    android:padding="16dp">
+
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Resultados:"
+      android:textSize="18sp"
+      android:textStyle="bold"
+      android:textColor="#2c3e50"
+      android:layout_marginBottom="12dp" />
+
+    <TextView
+      android:id="@+id/textViewTipAmount"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Propina: $0.00"
+      android:textSize="16sp"
+      android:textColor="#27ae60"
+      android:layout_marginBottom="8dp" />
+
+    <TextView
+      android:id="@+id/textViewTotalAmount"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Total a pagar: $0.00"
+      android:textSize="16sp"
+      android:textColor="#e74c3c"
+      android:layout_marginBottom="8dp" />
+
+    <TextView
+      android:id="@+id/textViewPerPerson"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Por persona: $0.00"
+      android:textSize="16sp"
+      android:textStyle="bold"
+      android:textColor="#3498db" />
+
+  </LinearLayout>
+
+</LinearLayout>
